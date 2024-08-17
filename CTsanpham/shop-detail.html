@@ -1,52 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Petthings - Shop detail</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
-    <head>
-        <meta charset="utf-8">
-        <title>Petthings - Shop detail</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
+    <!-- Icon Font Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
-        <!-- Libraries Stylesheet -->
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="My style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-        <link href="My style.css" rel="stylesheet" type="text/css">
-    </head>
-<body>
-
-        <!-- Spinner Start -->
-        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" role="status"></div>
-        </div>
-        <!-- Spinner End -->
-
-
-        <!-- Navbar start -->
-       <header>
+    <!-- Navbar start -->
+    <header>
       <div class="fruitable-top">
         <div class="fruitable-search">
           <i class="fas fa-search"></i>
           <input type="text" id="search-input" />
         </div>
         <div class="fruitable-logo">
-          <a href="../khue/product/Lien he + Index/index.html">
+          <a href="../khue/product/index_contact/index.html">
             <img src="img/petthings.png" alt="Main Logo" />
           </a>
         </div>
@@ -74,502 +82,844 @@
           <li><a href="../Petthings/KM.html">Khuyến mãi</a></li>
           <li><a href="../blog/blog.html">Tin tức</a></li>
           <li><a href="../Chinh sach/Chinh sach.html">Chính sách</a></li>
-          <li><a href="../khue/product/Lien he + Index/lienhe.html">Liên hệ</a></li>
+          <li>
+            <a href="../khue/product/index_contact/lienhe.html">Liên hệ</a>
+          </li>
         </ul>
       </div>
     </header>
-        <!-- Navbar End -->
-<!-- Modal Search Start -->
-        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body d-flex align-items-center">
-                        <div class="input-group w-75 mx-auto d-flex">
-                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
-                        </div>
-                    </div>
-                </div>
+    <!-- Navbar End -->
+    <!-- Modal Search Start -->
+    <div
+      class="modal fade"
+      id="searchModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content rounded-0">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Search by keyword
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body d-flex align-items-center">
+            <div class="input-group w-75 mx-auto d-flex">
+              <input
+                type="search"
+                class="form-control p-3"
+                placeholder="keywords"
+                aria-describedby="search-icon-1"
+              />
+              <span id="search-icon-1" class="input-group-text p-3"
+                ><i class="fa fa-search"></i
+              ></span>
             </div>
+          </div>
         </div>
-        <!-- Modal Search End -->
+      </div>
+    </div>
+    <!-- Modal Search End -->
 
+    <!-- Single Page Header start -->
+    <div class="container-fluid page-header py-5">
+      <h1 class="text-center text-1"></h1>
+    </div>
+    <!-- Single Page Header End -->
 
-        <!-- Single Page Header start -->
-        <div class="container-fluid page-header py-5">
-            <h1 class="text-center text-1"></h1>
-            
-        </div>
-        <!-- Single Page Header End -->
-
-
-        <!-- Single Product Start -->
-        <div class="container-fluid py-5 mt-5">
-            <div class="container py-5">
-                <div class="row g-4 mb-5">
-                    <div class="col-lg-8 col-xl-9">
-                        <div class="row g-4">
-                            <div class="col-lg-6">
-                                <div class="border rounded">
-                                    <a href="#">
-                                        <img src="img/banner.png" style="border: 2px solid #F9C9DA" class="img-fluid rounded" alt="Image">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <h4 class="fw-bold mb-3">Thức ăn chó hạt mềm JERHIGH - Meat as Meals Salmon Recipe</h4>
-                                <p class="mb-3">Hương Vị: Cá hồi</p>
-                                <h5 class="fw-bold mb-3">275.000 đ</h5>
-                                <div class="d-flex mb-4">
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <p class="mb-4">Thức ăn hạt mềm cho chó vị cá hồi JERHIGH Meat as Meals Salmon Recipe là một nhãn hiệu thức ăn cho chó mới từ Thái Lan.</p>
-                                <p class="mb-4">Sản phẩm được sản xuất từ các nguyên liệu chất lượng cao như cá hồi, thịt và trứng cung cấp một dinh dưỡng toàn diện cho chó.</p>
-                                <div class="input-group quantity mb-5" style="width: 100px;">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
-                                            <i class="fa fa-minus"></i>
-                                        </button>
-                                    </div>
-                                    <input type="text" class="form-control form-control-sm text-center border-0" value="1">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-plus rounded-circle bg-light border">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <a href="../login/login.html" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 tx-2"></i> Thêm vào giỏ hàng</a>
-                            </div>
-                            <div class="col-lg-12">
-                                <nav>
-                                    <div class="nav nav-tabs mb-3">
-                                        <button class="nav-link active border-white border-bottom-0" type="button" role="tab"
-                                            id="nav-about-tab" data-bs-toggle="tab" data-bs-target="#nav-about"
-                                            aria-controls="nav-about" aria-selected="true">Mô tả</button>
-                                        <button class="nav-link border-white border-bottom-0" type="button" role="tab"
-                                            id="nav-mission-tab" data-bs-toggle="tab" data-bs-target="#nav-mission"
-                                            aria-controls="nav-mission" aria-selected="false">Đánh giá</button>
-                                    </div>
-                                </nav>
-                                <div class="tab-content mb-5">
-                                    <div class="tab-pane active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
-										<h5>Thành phần dinh dưỡng</h5>
-                                        <p>Thức ăn hạt mềm cho chó vị cá hồi JERHIGH Meat as Meals Salmon Recipe chứa 20% protein tối thiểu, 9% chất béo tối thiểu, 4% tro tối đa và 20% độ ẩm tối đa, đảm bảo sự cân bằng dinh dưỡng cho chó.Hãy chọn dòng thức ăn cho chó “Meat as Meals” để chăm sóc sức khỏe và tăng tuổi thọ cho cún cưng của bạn </p>
-										<h5>Lợi ích chính</h5>
-                                        <p>Omega 3 và 6 giúp cải thiện sức khỏe da và lông được tìm thấy trong cá và thực vật.Glucosamine và chondroitin là các chất dinh dưỡng được chiết xuất từ sụn của cá biển giúp duy trì sự khỏe mạnh của khớp và xương.</p>
-										<p>Inulin là một loại prebiotics tự nhiên được chiết xuất từ rễ củ cải chicory giúp cải thiện hệ tiêu hóa.Limonite là một khoáng chất giúp giảm mùi hôi của phân và nước tiểu của chó tới 80-85%.Beta-Glucan được chiết xuất từ men để tăng cường hệ thống miễn dịch..</p>
-										<h5>Hướng dẫn sử dụng</h5>
-										
-                                        <div class="px-2">
-                                            <div class="row g-4 justify-content-center mb-3 mt-2">
-                                                <div class="col-8">
-                                                    <div class="row bg-light align-items-center text-center justify-content-center py-2">
-                                                        <div class="col-6">
-                                                            <p class="mb-0">Số ký</p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="mb-0">Khối lượng</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row text-center align-items-center justify-content-center py-2">
-                                                        <div class="col-6">
-                                                            <p class="mb-0"> Chó nhỏ bé hơn 5 kg </p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="mb-0">45-95g / bữa</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row bg-light text-center align-items-center justify-content-center py-2">
-                                                        <div class="col-6">
-                                                            <p class="mb-0">Chó vừa từ 5-10 kg</p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="mb-0">96-160g / bữa</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row text-center align-items-center justify-content-center py-2">
-                                                        <div class="col-6">
-                                                            <p class="mb-0">Chó lớn từ 10-25 kg</p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="mb-0">161-300g / bữa</p>
-                                                        </div>
-													</div>
-                                                </div>
-                                            </div>
-                                        </div>
-										
-										<p> Hãy luôn chuẩn bị nước uống sạch cho chó của bạn. Khi chuyển đổi thức ăn mới cho chó, hãy trộn thức ăn của JERHIGH Meat as Meal với chế độ ăn hiện tại bắt đầu bằng một lượng nhỏ và tăng dần trong vòng 7 ngày đầu sử dụng.</p>
-                                    </div>
-                                    <div class="tab-pane" id="nav-mission" role="tabpanel" aria-labelledby="nav-mission-tab">
-                                        <div class="d-flex">
-                                            <img src="img/avatar.jpg" class="img-fluid rounded-circle p-3" style="width: 100px; height: 100px;" alt="">
-                                            <div class="">
-                                                <p class="mb-2" style="font-size: 14px;">27/5/2024</p>
-                                                <div class="d-flex justify-content-between">
-                                                    <h5>Nguyễn Hồng Hằng</h5>
-                                                    <div class="d-flex mb-3">
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                    </div>
-                                                </div>
-                                                <p>Nhà mình có em chó cỏ siêu kén ăn, bỏ ăn tới nỗi tụt từ 30kg xuống 26kg, vậy mà bé chịu ăn loại này mình cũng hơi shock. Mua 3 loại hạt cho bé ăn thử thì bé ăn mỗi loại này. Chắc là đắt xắt ra miếng.</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <img src="img/avatar.jpg" class="img-fluid rounded-circle p-3" style="width: 100px; height: 100px;" alt="">
-                                            <div class="">
-                                                <p class="mb-2" style="font-size: 14px;">8/7/2024</p>
-                                                <div class="d-flex justify-content-between">
-                                                    <h5>Trúc Phạm</h5>
-                                                    <div class="d-flex mb-3">
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                    </div>
-                                                </div>
-                                                <p class="text-dark">bé phốc sóc nhà mình kén ăn lắm, mà hạt này mềm dễ nhai, mua thử mà dính luôn nha, bé ăn nhiệt tình 🥹 🥹 chắc là mình sẽ mix thêm gà sấy nữa vì 1kg tận 500k ăn trong 2 tuần là hết rồi, hao quá </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <form action="#">
-                                <h4 class="mb-5 fw-bold">Đánh giá cho chúng mình nhé !!! </h4>
-                                <div class="row g-4">
-                                    <div class="col-lg-6">
-                                        <div class="border-bottom rounded rate-form">
-                                            <input type="text" class="form-control border-2 me-4" placeholder="Tên Của Bạn *">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="border-bottom rounded rate-form">
-                                            <input type="email" class="form-control border-2" placeholder="Email *">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="border-bottom rounded my-4">
-                                            <textarea name="" id="detail-textarea" class="form-control border-2" cols="30" rows="8" placeholder="Sản phẩm của tụi mình tốt chứ ? *" spellcheck="false" style="resize: none;"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="d-flex justify-content-between py-3 mb-5">
-                                            <div class="d-flex align-items-center">
-                                                <p class="mb-0 me-3">Please rate:</p>
-                                                <div class="d-flex align-items-center" style="font-size: 12px;">
-                                                    <i class="fa fa-star text-muted"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                            </div>
-                                            <a href="#" class="btn border border-secondary text-primary rounded-pill px-4 py-3"> Đăng </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-xl-3">
-                        <div class="row g-4 fruite">
-                            <div class="col-lg-12">
-                                <div class="mb-4">
-                                    <h4>Vị</h4>
-                                    <ul class="list-unstyled fruite-categorie">
-                                        <li>
-                                            <div class="d-flex justify-content-between fruite-name">
-                                                <a href="#"><i class="fas fa-solid fa-bone me-2 ic-1"></i>Gà dâu tây</a>
-                                                <span>(3)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex justify-content-between fruite-name">
-                                                <a href="#"><i class="fas fa-solid fa-bone me-2 ic-2"></i>Gà rau chân vịt</a>
-                                                <span>(5)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex justify-content-between fruite-name">
-                                                <a href="#"><i class="fas fa-solid fa-bone me-2 ic-3"></i>Gà cà rốt</a>
-                                                <span>(2)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex justify-content-between fruite-name">
-                                                <a href="#"><i class="fas fa-solid fa-bone me-2 ic-4"></i>Trứng thịt gà</a>
-                                                <span>(8)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <h4 class="mb-4">Khuyến Mãi</h4>
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <div class="rounded" style="width: 100px; height: 100px;">
-                                        <img src="img/mu-cho-cho.png" class="img-fluid rounded" alt="Image">
-                                    </div>
-                                    <div>
-                                        <h6 class="mb-2">Mũ cho chó</h6>
-                                        <div class="d-flex mb-2">
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="d-flex mb-2">
-                                            <h5 class="fw-bold me-2">27.000đ</h5>
-                                            <h5 class="text-danger text-decoration-line-through">29.000đ</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <div class="rounded me-4" style="width: 100px; height: 100px;">
-                                        <img src="img/xich-cho-cho.png" class="img-fluid rounded" alt="">
-                                    </div>
-                                    <div>
-                                        <h6 class="mb-2">Xích cho chó</h6>
-                                        <div class="d-flex mb-2">
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="d-flex mb-2">
-                                            <h5 class="fw-bold me-2">46.000đ</h5>
-                                            <h5 class="text-danger text-decoration-line-through">70.000đ</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <div class="rounded" style="width: 100px; height: 100px;">
-                                        <img src="img/bang-ten.png" class="img-fluid rounded" alt="">
-                                    </div>
-                                    <div>
-                                        <h6 class="mb-2">Bảng tên</h6>
-                                        <div class="d-flex mb-2">
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="d-flex mb-2">
-                                            <h5 class="fw-bold me-2">45.000đ</h5>
-                                            <h5 class="text-danger text-decoration-line-through">50.000đ</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <div class="rounded me-4" style="width: 100px; height: 100px;">
-                                        <img src="img/Pate cho chó.png" class="img-fluid rounded" alt="">
-                                    </div>
-                                    <div>
-                                        <h6 class="mb-2">Pate cho chó</h6>
-                                        <div class="d-flex mb-2">
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="d-flex mb-2">
-                                            <h5 class="fw-bold me-2">22.500đ</h5>
-                                            <h5 class="text-danger text-decoration-line-through">25.000đ</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <div class="rounded me-4" style="width: 100px; height: 100px;">
-                                        <img src="img/luc-lac.png" class="img-fluid rounded" alt="">
-                                    </div>
-                                    <div>
-                                        <h6 class="mb-2">Chuông lục lạc</h6>
-                                        <div class="d-flex mb-2">
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="d-flex mb-2">
-                                            <h5 class="fw-bold me-2">22.500đ</h5>
-                                            <h5 class="text-danger text-decoration-line-through">25.000đ</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <div class="rounded me-4" style="width: 100px; height: 100px;">
-                                        <img src="img/vong-co-dat-cho.png" class="img-fluid rounded" alt="">
-                                    </div>
-                                    <div>
-                                        <h6 class="mb-2">Vòng cổ dắt chó</h6>
-                                        <div class="d-flex mb-2">
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="d-flex mb-2">
-                                            <h5 class="fw-bold me-2">59.000đ</h5>
-                                            <h5 class="text-danger text-decoration-line-through">70.000đ</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-center my-4">
-                                    <a href="#" class="btn border border-secondary px-4 py-3 rounded-pill text-primary w-100">Xem Thêm</a>
-                                </div>
-                            </div>
-                          
-                        </div>
-                    </div>
+    <!-- Single Product Start -->
+    <div class="container-fluid py-5 mt-5">
+      <div class="container py-5">
+        <div class="row g-4 mb-5">
+          <div class="col-lg-8 col-xl-9">
+            <div class="row g-4">
+              <div class="col-lg-6">
+                <div class="border rounded">
+                  <a href="#">
+                    <img
+                      src="img/banner.png"
+                      style="border: 2px solid #f9c9da"
+                      class="img-fluid rounded"
+                      alt="Image"
+                    />
+                  </a>
                 </div>
-                <h1 class="fw-bold mb-0">Sản phẩm liên quan</h1>
-                <div class="vesitable">
-                    <div class="owl-carousel vegetable-carousel justify-content-center">
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="img/golden.png"class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Thú cưng</div>
-                            <div class="p-4 pb-0 rounded-bottom">
-                                <h4>Cún Golden</h4>
-                                <p>Bộ lông vàng đâm khoẻ khoắn, vóc dáng cún cân đối hài hoà.</p>
-                                <div class="d-flex flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold">14.000.000 VND</p>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i>Thêm vào giỏ hàng</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="img/corgi.png" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Thú cưng</div>
-                            <div class="p-4 pb-0 rounded-bottom">
-                                <h4>Cún Corgi</h4>
-                                <p>Chó Corgi là giống chó năng động, thông minh và đáng yêu.</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold">14.000.000 VND</p>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i>Thêm vào giỏ hàng</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="img/banner.png" class="img-fluid w-100 rounded-top bg-light" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Thức ăn</div>
-                            <div class="p-4 pb-0 rounded-bottom">
-                                <h4>JERHIGH gà</h4>
-                                <p>Thành phần: thịt bò, thịt gà, bột mì, trứng tốt cho sức khỏe.</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold">275.000 VND</p>
-                                    <a href="../login/login.html"  class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm vào giỏ hàng</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="img/samoyed.png" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Thú cưng</div>
-                            <div class="p-4 pb-0 rounded-bottom">
-                                <h4>Cún Samoyed</h4>
-                                <p>Giống chó thân thiện và yêu thích sự tương tác với con người. </p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold">12.000.000 VND</p>
-                                    <a href="../login/login.html"  class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i>Thêm vào giỏ hàng</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="img/bang-ten.png" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Phụ kiện</div>
-                            <div class="p-4 pb-0 rounded-bottom">
-                                <h4>Bảng tên</h4>
-                                <p>Phụ kiện nhỏ gọn,được gắn vào vòng cổ của cún ngay trước cổ. </p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold">50.000 VND</p>
-                                    <a href="../login/login.html"  class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i>Thêm vào giỏ hàng</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="img/mu-cho-cho.png" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Phụ kiện</div>
-                            <div class="p-4 pb-0 rounded-bottom">
-                                <h4>Mũ cho chó</h4>
-                                <p>Vật liệu mềm mại và nhẹ, phù hợp cho cả những chú chó nhỏ và lớn.</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold">29.000 VND</p>
-                                    <a href="../login/login.html"  class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i>Thêm vào giỏ hàng</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="img/shiba.png" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Thú cưng</div>
-                            <div class="p-4 pb-0 rounded-bottom">
-                                <h4>Cún Shiba</h4>
-                                <p>Nổi tiếng với vẻ ngoài nhỏ gọn và bộ lông dày, mềm mại.</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold">23.000.000 VND</p>
-                                    <a href="../login/login.html"  class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i>Thêm vào giỏ hàng</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="img/Thức ăn hạt mềm cho chó vị thịt gà cà rốt JERHIGH Meat as Meals Chicken With Carrot Formula.png" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Thức ăn</div>
-                            <div class="p-4 pb-0 rounded-bottom">
-                                <h4>JERHIGH trứng</h4>
-                                <p>Thành phần: thịt bò, thịt gà, bột mì, trứng giàu dinh dưỡng.</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold">275.000 VND</p>
-                                    <a href="../login/login.html" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i>Thêm vào giỏ hàng</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="col-lg-6">
+                <h4 class="fw-bold mb-3">
+                  Thức ăn chó hạt mềm JERHIGH - Meat as Meals Salmon Recipe
+                </h4>
+                <p class="mb-3">Hương Vị: Cá hồi</p>
+                <h5 class="fw-bold mb-3">275.000 đ</h5>
+                <div class="d-flex mb-4">
+                  <i class="fa fa-star text-secondary"></i>
+                  <i class="fa fa-star text-secondary"></i>
+                  <i class="fa fa-star text-secondary"></i>
+                  <i class="fa fa-star text-secondary"></i>
+                  <i class="fa fa-star"></i>
                 </div>
+                <p class="mb-4">
+                  Thức ăn hạt mềm cho chó vị cá hồi JERHIGH Meat as Meals Salmon
+                  Recipe là một nhãn hiệu thức ăn cho chó mới từ Thái Lan.
+                </p>
+                <p class="mb-4">
+                  Sản phẩm được sản xuất từ các nguyên liệu chất lượng cao như
+                  cá hồi, thịt và trứng cung cấp một dinh dưỡng toàn diện cho
+                  chó.
+                </p>
+                <div class="input-group quantity mb-5" style="width: 100px">
+                  <div class="input-group-btn">
+                    <button
+                      class="btn btn-sm btn-minus rounded-circle bg-light border"
+                    >
+                      <i class="fa fa-minus"></i>
+                    </button>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control form-control-sm text-center border-0"
+                    value="1"
+                  />
+                  <div class="input-group-btn">
+                    <button
+                      class="btn btn-sm btn-plus rounded-circle bg-light border"
+                    >
+                      <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+                <a
+                  href="../login/login.html"
+                  class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"
+                  ><i class="fa fa-shopping-bag me-2 tx-2"></i> Thêm vào giỏ
+                  hàng</a
+                >
+              </div>
+              <div class="col-lg-12">
+                <nav>
+                  <div class="nav nav-tabs mb-3">
+                    <button
+                      class="nav-link active border-white border-bottom-0"
+                      type="button"
+                      role="tab"
+                      id="nav-about-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#nav-about"
+                      aria-controls="nav-about"
+                      aria-selected="true"
+                    >
+                      Mô tả
+                    </button>
+                    <button
+                      class="nav-link border-white border-bottom-0"
+                      type="button"
+                      role="tab"
+                      id="nav-mission-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#nav-mission"
+                      aria-controls="nav-mission"
+                      aria-selected="false"
+                    >
+                      Đánh giá
+                    </button>
+                  </div>
+                </nav>
+                <div class="tab-content mb-5">
+                  <div
+                    class="tab-pane active"
+                    id="nav-about"
+                    role="tabpanel"
+                    aria-labelledby="nav-about-tab"
+                  >
+                    <h5>Thành phần dinh dưỡng</h5>
+                    <p>
+                      Thức ăn hạt mềm cho chó vị cá hồi JERHIGH Meat as Meals
+                      Salmon Recipe chứa 20% protein tối thiểu, 9% chất béo tối
+                      thiểu, 4% tro tối đa và 20% độ ẩm tối đa, đảm bảo sự cân
+                      bằng dinh dưỡng cho chó.Hãy chọn dòng thức ăn cho chó
+                      “Meat as Meals” để chăm sóc sức khỏe và tăng tuổi thọ cho
+                      cún cưng của bạn
+                    </p>
+                    <h5>Lợi ích chính</h5>
+                    <p>
+                      Omega 3 và 6 giúp cải thiện sức khỏe da và lông được tìm
+                      thấy trong cá và thực vật.Glucosamine và chondroitin là
+                      các chất dinh dưỡng được chiết xuất từ sụn của cá biển
+                      giúp duy trì sự khỏe mạnh của khớp và xương.
+                    </p>
+                    <p>
+                      Inulin là một loại prebiotics tự nhiên được chiết xuất từ
+                      rễ củ cải chicory giúp cải thiện hệ tiêu hóa.Limonite là
+                      một khoáng chất giúp giảm mùi hôi của phân và nước tiểu
+                      của chó tới 80-85%.Beta-Glucan được chiết xuất từ men để
+                      tăng cường hệ thống miễn dịch..
+                    </p>
+                    <h5>Hướng dẫn sử dụng</h5>
+
+                    <div class="px-2">
+                      <div class="row g-4 justify-content-center mb-3 mt-2">
+                        <div class="col-8">
+                          <div
+                            class="row bg-light align-items-center text-center justify-content-center py-2"
+                          >
+                            <div class="col-6">
+                              <p class="mb-0">Số ký</p>
+                            </div>
+                            <div class="col-6">
+                              <p class="mb-0">Khối lượng</p>
+                            </div>
+                          </div>
+                          <div
+                            class="row text-center align-items-center justify-content-center py-2"
+                          >
+                            <div class="col-6">
+                              <p class="mb-0">Chó nhỏ bé hơn 5 kg</p>
+                            </div>
+                            <div class="col-6">
+                              <p class="mb-0">45-95g / bữa</p>
+                            </div>
+                          </div>
+                          <div
+                            class="row bg-light text-center align-items-center justify-content-center py-2"
+                          >
+                            <div class="col-6">
+                              <p class="mb-0">Chó vừa từ 5-10 kg</p>
+                            </div>
+                            <div class="col-6">
+                              <p class="mb-0">96-160g / bữa</p>
+                            </div>
+                          </div>
+                          <div
+                            class="row text-center align-items-center justify-content-center py-2"
+                          >
+                            <div class="col-6">
+                              <p class="mb-0">Chó lớn từ 10-25 kg</p>
+                            </div>
+                            <div class="col-6">
+                              <p class="mb-0">161-300g / bữa</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p>
+                      Hãy luôn chuẩn bị nước uống sạch cho chó của bạn. Khi
+                      chuyển đổi thức ăn mới cho chó, hãy trộn thức ăn của
+                      JERHIGH Meat as Meal với chế độ ăn hiện tại bắt đầu bằng
+                      một lượng nhỏ và tăng dần trong vòng 7 ngày đầu sử dụng.
+                    </p>
+                  </div>
+                  <div
+                    class="tab-pane"
+                    id="nav-mission"
+                    role="tabpanel"
+                    aria-labelledby="nav-mission-tab"
+                  >
+                    <div class="d-flex">
+                      <img
+                        src="img/avatar.jpg"
+                        class="img-fluid rounded-circle p-3"
+                        style="width: 100px; height: 100px"
+                        alt=""
+                      />
+                      <div class="">
+                        <p class="mb-2" style="font-size: 14px">27/5/2024</p>
+                        <div class="d-flex justify-content-between">
+                          <h5>Nguyễn Hồng Hằng</h5>
+                          <div class="d-flex mb-3">
+                            <i class="fa fa-star text-secondary"></i>
+                            <i class="fa fa-star text-secondary"></i>
+                            <i class="fa fa-star text-secondary"></i>
+                            <i class="fa fa-star text-secondary"></i>
+                            <i class="fa fa-star text-secondary"></i>
+                          </div>
+                        </div>
+                        <p>
+                          Nhà mình có em chó cỏ siêu kén ăn, bỏ ăn tới nỗi tụt
+                          từ 30kg xuống 26kg, vậy mà bé chịu ăn loại này mình
+                          cũng hơi shock. Mua 3 loại hạt cho bé ăn thử thì bé ăn
+                          mỗi loại này. Chắc là đắt xắt ra miếng.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="d-flex">
+                      <img
+                        src="img/avatar.jpg"
+                        class="img-fluid rounded-circle p-3"
+                        style="width: 100px; height: 100px"
+                        alt=""
+                      />
+                      <div class="">
+                        <p class="mb-2" style="font-size: 14px">8/7/2024</p>
+                        <div class="d-flex justify-content-between">
+                          <h5>Trúc Phạm</h5>
+                          <div class="d-flex mb-3">
+                            <i class="fa fa-star text-secondary"></i>
+                            <i class="fa fa-star text-secondary"></i>
+                            <i class="fa fa-star text-secondary"></i>
+                            <i class="fa fa-star text-secondary"></i>
+                            <i class="fa fa-star text-secondary"></i>
+                          </div>
+                        </div>
+                        <p class="text-dark">
+                          bé phốc sóc nhà mình kén ăn lắm, mà hạt này mềm dễ
+                          nhai, mua thử mà dính luôn nha, bé ăn nhiệt tình 🥹 🥹
+                          chắc là mình sẽ mix thêm gà sấy nữa vì 1kg tận 500k ăn
+                          trong 2 tuần là hết rồi, hao quá
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <form action="#">
+                <h4 class="mb-5 fw-bold">Đánh giá cho chúng mình nhé !!!</h4>
+                <div class="row g-4">
+                  <div class="col-lg-6">
+                    <div class="border-bottom rounded rate-form">
+                      <input
+                        type="text"
+                        class="form-control border-2 me-4"
+                        placeholder="Tên Của Bạn *"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="border-bottom rounded rate-form">
+                      <input
+                        type="email"
+                        class="form-control border-2"
+                        placeholder="Email *"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="border-bottom rounded my-4">
+                      <textarea
+                        name=""
+                        id="detail-textarea"
+                        class="form-control border-2"
+                        cols="30"
+                        rows="8"
+                        placeholder="Sản phẩm của tụi mình tốt chứ ? *"
+                        spellcheck="false"
+                        style="resize: none"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="d-flex justify-content-between py-3 mb-5">
+                      <div class="d-flex align-items-center">
+                        <p class="mb-0 me-3">Please rate:</p>
+                        <div
+                          class="d-flex align-items-center"
+                          style="font-size: 12px"
+                        >
+                          <i class="fa fa-star text-muted"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                        </div>
+                      </div>
+                      <a
+                        href="#"
+                        class="btn border border-secondary text-primary rounded-pill px-4 py-3"
+                      >
+                        Đăng
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
+          </div>
+          <div class="col-lg-4 col-xl-3">
+            <div class="row g-4 fruite">
+              <div class="col-lg-12">
+                <div class="mb-4">
+                  <h4>Vị</h4>
+                  <ul class="list-unstyled fruite-categorie">
+                    <li>
+                      <div class="d-flex justify-content-between fruite-name">
+                        <a href="#"
+                          ><i class="fas fa-solid fa-bone me-2 ic-1"></i>Gà dâu
+                          tây</a
+                        >
+                        <span>(3)</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex justify-content-between fruite-name">
+                        <a href="#"
+                          ><i class="fas fa-solid fa-bone me-2 ic-2"></i>Gà rau
+                          chân vịt</a
+                        >
+                        <span>(5)</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex justify-content-between fruite-name">
+                        <a href="#"
+                          ><i class="fas fa-solid fa-bone me-2 ic-3"></i>Gà cà
+                          rốt</a
+                        >
+                        <span>(2)</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex justify-content-between fruite-name">
+                        <a href="#"
+                          ><i class="fas fa-solid fa-bone me-2 ic-4"></i>Trứng
+                          thịt gà</a
+                        >
+                        <span>(8)</span>
+                      </div>
+                    </li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <h4 class="mb-4">Khuyến Mãi</h4>
+                <div class="d-flex align-items-center justify-content-start">
+                  <div class="rounded" style="width: 100px; height: 100px">
+                    <img
+                      src="img/mu-cho-cho.png"
+                      class="img-fluid rounded"
+                      alt="Image"
+                    />
+                  </div>
+                  <div>
+                    <h6 class="mb-2">Mũ cho chó</h6>
+                    <div class="d-flex mb-2">
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                    <div class="d-flex mb-2">
+                      <h5 class="fw-bold me-2">27.000đ</h5>
+                      <h5 class="text-danger text-decoration-line-through">
+                        29.000đ
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-start">
+                  <div class="rounded me-4" style="width: 100px; height: 100px">
+                    <img
+                      src="img/xich-cho-cho.png"
+                      class="img-fluid rounded"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h6 class="mb-2">Xích cho chó</h6>
+                    <div class="d-flex mb-2">
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                    <div class="d-flex mb-2">
+                      <h5 class="fw-bold me-2">46.000đ</h5>
+                      <h5 class="text-danger text-decoration-line-through">
+                        70.000đ
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-start">
+                  <div class="rounded" style="width: 100px; height: 100px">
+                    <img
+                      src="img/bang-ten.png"
+                      class="img-fluid rounded"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h6 class="mb-2">Bảng tên</h6>
+                    <div class="d-flex mb-2">
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                    <div class="d-flex mb-2">
+                      <h5 class="fw-bold me-2">45.000đ</h5>
+                      <h5 class="text-danger text-decoration-line-through">
+                        50.000đ
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-start">
+                  <div class="rounded me-4" style="width: 100px; height: 100px">
+                    <img
+                      src="img/Pate cho chó.png"
+                      class="img-fluid rounded"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h6 class="mb-2">Pate cho chó</h6>
+                    <div class="d-flex mb-2">
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                    <div class="d-flex mb-2">
+                      <h5 class="fw-bold me-2">22.500đ</h5>
+                      <h5 class="text-danger text-decoration-line-through">
+                        25.000đ
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-start">
+                  <div class="rounded me-4" style="width: 100px; height: 100px">
+                    <img
+                      src="img/luc-lac.png"
+                      class="img-fluid rounded"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h6 class="mb-2">Chuông lục lạc</h6>
+                    <div class="d-flex mb-2">
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                    <div class="d-flex mb-2">
+                      <h5 class="fw-bold me-2">22.500đ</h5>
+                      <h5 class="text-danger text-decoration-line-through">
+                        25.000đ
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-start">
+                  <div class="rounded me-4" style="width: 100px; height: 100px">
+                    <img
+                      src="img/vong-co-dat-cho.png"
+                      class="img-fluid rounded"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h6 class="mb-2">Vòng cổ dắt chó</h6>
+                    <div class="d-flex mb-2">
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star text-secondary"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                    <div class="d-flex mb-2">
+                      <h5 class="fw-bold me-2">59.000đ</h5>
+                      <h5 class="text-danger text-decoration-line-through">
+                        70.000đ
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center my-4">
+                  <a
+                    href="#"
+                    class="btn border border-secondary px-4 py-3 rounded-pill text-primary w-100"
+                    >Xem Thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Single Product End -->
-    
+        <h1 class="fw-bold mb-0">Sản phẩm liên quan</h1>
+        <div class="vesitable">
+          <div class="owl-carousel vegetable-carousel justify-content-center">
+            <div
+              class="border border-primary rounded position-relative vesitable-item"
+            >
+              <div class="vesitable-img">
+                <img
+                  src="img/golden.png"
+                  class="img-fluid w-100 rounded-top"
+                  alt=""
+                />
+              </div>
+              <div
+                class="text-white bg-primary px-3 py-1 rounded position-absolute"
+                style="top: 10px; right: 10px"
+              >
+                Thú cưng
+              </div>
+              <div class="p-4 pb-0 rounded-bottom">
+                <h4>Cún Golden</h4>
+                <p>
+                  Bộ lông vàng đâm khoẻ khoắn, vóc dáng cún cân đối hài hoà.
+                </p>
+                <div class="d-flex flex-lg-wrap">
+                  <p class="text-dark fs-5 fw-bold">14.000.000 VND</p>
+                  <a
+                    href="#"
+                    class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"
+                    ><i class="fa fa-shopping-bag me-2 text-primary"></i>Thêm
+                    vào giỏ hàng</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="border border-primary rounded position-relative vesitable-item"
+            >
+              <div class="vesitable-img">
+                <img
+                  src="img/corgi.png"
+                  class="img-fluid w-100 rounded-top"
+                  alt=""
+                />
+              </div>
+              <div
+                class="text-white bg-primary px-3 py-1 rounded position-absolute"
+                style="top: 10px; right: 10px"
+              >
+                Thú cưng
+              </div>
+              <div class="p-4 pb-0 rounded-bottom">
+                <h4>Cún Corgi</h4>
+                <p>Chó Corgi là giống chó năng động, thông minh và đáng yêu.</p>
+                <div class="d-flex justify-content-between flex-lg-wrap">
+                  <p class="text-dark fs-5 fw-bold">14.000.000 VND</p>
+                  <a
+                    href="#"
+                    class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"
+                    ><i class="fa fa-shopping-bag me-2 text-primary"></i>Thêm
+                    vào giỏ hàng</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="border border-primary rounded position-relative vesitable-item"
+            >
+              <div class="vesitable-img">
+                <img
+                  src="img/banner.png"
+                  class="img-fluid w-100 rounded-top bg-light"
+                  alt=""
+                />
+              </div>
+              <div
+                class="text-white bg-primary px-3 py-1 rounded position-absolute"
+                style="top: 10px; right: 10px"
+              >
+                Thức ăn
+              </div>
+              <div class="p-4 pb-0 rounded-bottom">
+                <h4>JERHIGH gà</h4>
+                <p>
+                  Thành phần: thịt bò, thịt gà, bột mì, trứng tốt cho sức khỏe.
+                </p>
+                <div class="d-flex justify-content-between flex-lg-wrap">
+                  <p class="text-dark fs-5 fw-bold">275.000 VND</p>
+                  <a
+                    href="../login/login.html"
+                    class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"
+                    ><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm
+                    vào giỏ hàng</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="border border-primary rounded position-relative vesitable-item"
+            >
+              <div class="vesitable-img">
+                <img
+                  src="img/samoyed.png"
+                  class="img-fluid w-100 rounded-top"
+                  alt=""
+                />
+              </div>
+              <div
+                class="text-white bg-primary px-3 py-1 rounded position-absolute"
+                style="top: 10px; right: 10px"
+              >
+                Thú cưng
+              </div>
+              <div class="p-4 pb-0 rounded-bottom">
+                <h4>Cún Samoyed</h4>
+                <p>
+                  Giống chó thân thiện và yêu thích sự tương tác với con người.
+                </p>
+                <div class="d-flex justify-content-between flex-lg-wrap">
+                  <p class="text-dark fs-5 fw-bold">12.000.000 VND</p>
+                  <a
+                    href="../login/login.html"
+                    class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"
+                    ><i class="fa fa-shopping-bag me-2 text-primary"></i>Thêm
+                    vào giỏ hàng</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="border border-primary rounded position-relative vesitable-item"
+            >
+              <div class="vesitable-img">
+                <img
+                  src="img/bang-ten.png"
+                  class="img-fluid w-100 rounded-top"
+                  alt=""
+                />
+              </div>
+              <div
+                class="text-white bg-primary px-3 py-1 rounded position-absolute"
+                style="top: 10px; right: 10px"
+              >
+                Phụ kiện
+              </div>
+              <div class="p-4 pb-0 rounded-bottom">
+                <h4>Bảng tên</h4>
+                <p>
+                  Phụ kiện nhỏ gọn,được gắn vào vòng cổ của cún ngay trước cổ.
+                </p>
+                <div class="d-flex justify-content-between flex-lg-wrap">
+                  <p class="text-dark fs-5 fw-bold">50.000 VND</p>
+                  <a
+                    href="../login/login.html"
+                    class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"
+                    ><i class="fa fa-shopping-bag me-2 text-primary"></i>Thêm
+                    vào giỏ hàng</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="border border-primary rounded position-relative vesitable-item"
+            >
+              <div class="vesitable-img">
+                <img
+                  src="img/mu-cho-cho.png"
+                  class="img-fluid w-100 rounded-top"
+                  alt=""
+                />
+              </div>
+              <div
+                class="text-white bg-primary px-3 py-1 rounded position-absolute"
+                style="top: 10px; right: 10px"
+              >
+                Phụ kiện
+              </div>
+              <div class="p-4 pb-0 rounded-bottom">
+                <h4>Mũ cho chó</h4>
+                <p>
+                  Vật liệu mềm mại và nhẹ, phù hợp cho cả những chú chó nhỏ và
+                  lớn.
+                </p>
+                <div class="d-flex justify-content-between flex-lg-wrap">
+                  <p class="text-dark fs-5 fw-bold">29.000 VND</p>
+                  <a
+                    href="../login/login.html"
+                    class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"
+                    ><i class="fa fa-shopping-bag me-2 text-primary"></i>Thêm
+                    vào giỏ hàng</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="border border-primary rounded position-relative vesitable-item"
+            >
+              <div class="vesitable-img">
+                <img
+                  src="img/shiba.png"
+                  class="img-fluid w-100 rounded-top"
+                  alt=""
+                />
+              </div>
+              <div
+                class="text-white bg-primary px-3 py-1 rounded position-absolute"
+                style="top: 10px; right: 10px"
+              >
+                Thú cưng
+              </div>
+              <div class="p-4 pb-0 rounded-bottom">
+                <h4>Cún Shiba</h4>
+                <p>Nổi tiếng với vẻ ngoài nhỏ gọn và bộ lông dày, mềm mại.</p>
+                <div class="d-flex justify-content-between flex-lg-wrap">
+                  <p class="text-dark fs-5 fw-bold">23.000.000 VND</p>
+                  <a
+                    href="../login/login.html"
+                    class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"
+                    ><i class="fa fa-shopping-bag me-2 text-primary"></i>Thêm
+                    vào giỏ hàng</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="border border-primary rounded position-relative vesitable-item"
+            >
+              <div class="vesitable-img">
+                <img
+                  src="img/Thức ăn hạt mềm cho chó vị thịt gà cà rốt JERHIGH Meat as Meals Chicken With Carrot Formula.png"
+                  class="img-fluid w-100 rounded-top"
+                  alt=""
+                />
+              </div>
+              <div
+                class="text-white bg-primary px-3 py-1 rounded position-absolute"
+                style="top: 10px; right: 10px"
+              >
+                Thức ăn
+              </div>
+              <div class="p-4 pb-0 rounded-bottom">
+                <h4>JERHIGH trứng</h4>
+                <p>
+                  Thành phần: thịt bò, thịt gà, bột mì, trứng giàu dinh dưỡng.
+                </p>
+                <div class="d-flex justify-content-between flex-lg-wrap">
+                  <p class="text-dark fs-5 fw-bold">275.000 VND</p>
+                  <a
+                    href="../login/login.html"
+                    class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"
+                    ><i class="fa fa-shopping-bag me-2 text-primary"></i>Thêm
+                    vào giỏ hàng</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Single Product End -->
 
-        <!-- Footer Start -->
-        <footer>
+    <!-- Footer Start -->
+    <footer>
       <div class="footer-col-1">
         <ul>
-          <li><a href="../khue/product/Lien he + Index/index.html">Cửa hàng</a></li>
+          <li>
+            <a href="../khue/product/index_contact/index.html">Cửa hàng</a>
+          </li>
           <li><a href="../about/about.html">Giới thiệu</a></li>
           <li><a href="../khue/product/sanphamtong.html">Sản phẩm</a></li>
           <li><a href="../Petthings/KM.html">Khuyến mãi</a></li>
@@ -586,7 +936,7 @@
         </ul>
         <h6>Phương thức thanh toán</h6>
         <div id="payment-method">
-          <img src="img/payment.png" alt="">
+          <img src="img/payment.png" alt="" />
         </div>
       </div>
       <div class="footer-col-3">
@@ -594,7 +944,7 @@
           <img src="img/petthings.png" alt="Petthings Logo" />
         </div>
         <div class="footer-register">
-          <input type="email" placeholder="Email" maxlength="25"/>
+          <input type="email" placeholder="Email" maxlength="25" />
           <button>Đăng ký ngay</button>
         </div>
         <ul>
@@ -613,11 +963,14 @@
         </ul>
       </div>
     </footer>
-        <!-- Footer End -->
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a
+      href="#"
+      class="btn btn-primary border-3 border-primary rounded-circle back-to-top"
+      ><i class="fa fa-arrow-up"></i
+    ></a>
 
-        
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -628,6 +981,5 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    </body>
-
+  </body>
 </html>
