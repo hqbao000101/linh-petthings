@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+/*HONG dam: #D85086
+HONG nhat: #F9C9DA*/
+header .fruitable-menu ul li a {
+    color: black;
+    font-size: 20px;
+    font-family: "Open Sans", "Helvetica Neue";
+    transition-duration: 0.3s;
+}
+.page-header {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/background.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media (min-width: 992px) {
+    .hero-header, .page-header {
+        margin-top: 0px !important;}
+h1{
+font-weight: bold;	
+}
+a {
+    color: #D85086;
+    text-decoration: none;
+}
+.btn.border-secondary:hover {
+    background: #D85086!important;
+    color: #FFFFFF !important;
+}
+.text-secondary {
+    color: #D85086 !important;
+}
+.rounded-bottom {
+	border-bottom-color: #D85086;
+    border-radius: 10px !important;
+    background-color:#F9C9DA;
+}
+.p-4 p {
+    text-align: center;
+}
+.pagination a {
+    color: var(--bs-dark);
+    padding: 10px 16px;
+    text-decoration: none;
+    transition: 0.5s;
+    border: #F9C9DA 2px solid; 
+    margin: 0 4px;
+}
+.pagination a:hover:not(.active) {
+    background-color: #D85086;
+	color: #FDFDFD;
+}
+.pagination a.active {
+    background-color:#D85086;
+    color: var(--bs-light);
+}
+
+

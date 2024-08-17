@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+/*HONG dam: #D85086
+HONG nhat: #F9C9DA*/
+.py-5 {
+    padding-top: 0px;
+}
+.hero-header {
+    background: url("../img/backgr.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg-secondary {
+    background-color: #D85086;
+}
+.container py-5{
+	padding-top: 0px;
+}
+.container h1{
+	padding-top: 0px;
+}
+h1{
+	color: #D85086;
+}
+}
+.text-primary {
+    color:#D85086;
+}
